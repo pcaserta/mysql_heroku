@@ -23,10 +23,10 @@ router.get("/users", (req, res) => {
 
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: "localhost",
-  user: "root",
-  password: "yourRootPassword",
-  database: "lbta_mysql"
+  host: "us-cdbr-iron-east-05.cleardb.net",
+  user: "b71bb0404adfb8",
+  password: "50cb7686",
+  database: "heroku_c2bd1b25a10d091"
 });
 
 function getConnection() {
