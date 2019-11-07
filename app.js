@@ -12,10 +12,6 @@ app.use(express.static("./public"));
 
 app.use(morgan("short"));
 
-
-
-
-
 app.get("/", (req, res) => {
   console.log("Responding to root route");
   res.send("Hello from roooooot");
@@ -26,7 +22,7 @@ const router = require("./routes/user.js");
 app.use(router);
 
 //server runnig on port 3000
-const port = 3000;
-app.listen(port, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
   console.log(`app listening on port ${port}...`);
 });
